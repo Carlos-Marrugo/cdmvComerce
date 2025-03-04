@@ -1,0 +1,38 @@
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; // Ocupar toda la pantalla
+    text-align: center;
+    background-color: #ffffff; // Fondo blanco (puedes cambiarlo)
+  
+    .logo {
+      width: 150px; // Ajusta el tamaño del logo según sea necesario
+      height: auto;
+      margin-bottom: 20px;
+    }
+  
+    .spinner {
+      width: 50px; // Tamaño del spinner
+      height: 50px;
+      margin-bottom: 20px;
+      animation: spin 1s linear infinite; // Animación de giro
+    }
+  
+    p {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #333;
+    }
+  }
+  
+  // Definir la animación de giro
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

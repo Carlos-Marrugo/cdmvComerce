@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Order Summary</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Name: {{ personalInfo.name }} {{ personalInfo.lastName }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Country: {{ personalInfo.country }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>City: {{ personalInfo.city }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Address: {{ personalInfo.address }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Payment Card: **** **** **** {{ paymentInfo.accountNumber.slice(-4) }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Total: {{ total | currency:'USD' }}</ion-label>
+  </ion-item>
+
+  <ion-button expand="full" (click)="goHome()">Go Home</ion-button>
+</ion-content>
