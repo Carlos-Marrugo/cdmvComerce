@@ -14,7 +14,7 @@ export class ProductDetailPage implements OnInit {
   product: any;
   quantity: number = 1;
   selectedColor: string = '';
-  availableColors: string[] = ['Rojo', 'Azul', 'Verde', 'Negro']; // Colores disponibles
+  availableColors: string[] = ['Rojo', 'Azul', 'Verde', 'Negro']; 
 
   constructor(
     private route: ActivatedRoute,
@@ -32,25 +32,21 @@ export class ProductDetailPage implements OnInit {
     }
   }
 
-  // Método para verificar si el producto es ropa
   isClothing(product: any): boolean {
     const clothingCategories = ["men's clothing", "women's clothing"];
     return clothingCategories.includes(product.category);
   }
 
-  // Método para aumentar la cantidad
   increaseQuantity() {
     this.quantity++;
   }
 
-  // Método para disminuir la cantidad
   decreaseQuantity() {
     if (this.quantity > 1) {
       this.quantity--;
     }
   }
 
-  // Método para agregar al carrito
   async addToCart(product: any) {
     this.cartService.addToCart(product, this.quantity, this.selectedColor);
     const toast = await this.toastController.create({
@@ -61,7 +57,6 @@ export class ProductDetailPage implements OnInit {
     toast.present();
   }
 
-  // Método para generar las estrellas de calificación
   getStars(rating: number): number[] {
     const stars = Math.round(rating);
     return Array(stars).fill(0);
