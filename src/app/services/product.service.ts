@@ -7,12 +7,12 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class ProductService {
-  private apiUrl = environment.apiUrl; // Usar la URL de environment
+  private apiUrl = environment.apiUrl; 
 
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/products`); // URL correcta para obtener todos los productos
+    return this.http.get(`${this.apiUrl}/products`); 
   }
 
   getProductById(id: number): Observable<any> {
