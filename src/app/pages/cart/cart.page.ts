@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
-import { ToastController } from '@ionic/angular'; // Importación correcta
+import { ToastController } from '@ionic/angular'; 
 import { Router } from '@angular/router';
 
 @Component({
