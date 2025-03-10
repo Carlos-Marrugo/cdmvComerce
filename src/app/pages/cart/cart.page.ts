@@ -14,7 +14,7 @@ export class CartPage implements OnInit {
 
   constructor(
     private cartService: CartService,
-    private toastController: ToastController, // Inyección correcta
+    private toastController: ToastController,
     private router: Router
   ) {}
 
